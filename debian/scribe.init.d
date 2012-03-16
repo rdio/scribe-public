@@ -1,14 +1,13 @@
 #! /bin/sh
-#
-# skeleton	example file to build /etc/init.d/ scripts.
-#		This file should be used to construct scripts for /etc/init.d.
-#
-#		Written by Miquel van Smoorenburg <miquels@cistron.nl>.
-#		Modified for Debian 
-#		by Ian Murdock <imurdock@gnu.ai.mit.edu>.
-#
-# Version:	@(#)skeleton  1.9  26-Feb-2001  miquels@cistron.nl
-#
+### BEGIN INIT INFO
+# Provides:          scribe
+# Required-Start:    $remote_fs $network $named
+# Required-Stop:     $remote_fs $network $named
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start scribe daemon on boot
+# Description:       Scribe daemon.
+### END INIT INFO
 
 export PYTHONPATH=/opt/rdio/lib/python2.6/site-packages/:$PYTHONPATH:/usr/lib/python2.6/site-packages
 
