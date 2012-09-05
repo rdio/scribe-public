@@ -34,7 +34,8 @@ configure-stamp:
 	$(CURDIR)/bootstrap.sh
 	$(CURDIR)/configure --prefix=/usr/local --with-thriftpath=/usr/local --with-fb303path=/usr/local \
                             PY_PREFIX="/usr/local" \
-                            CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" CXXFLAGS="$(CFLAGS)" CPPFLAGS="-DHAVE_INTTYPES_H -DHAVE_NETINET_IN_H"
+                            CPPFLAGS="-DHAVE_INTTYPES_H -DHAVE_NETINET_IN_H -DBOOST_FILESYSTEM_VERSION=2" LIBS="-lboost_system -lboost_filesystem" \
+                            CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" CXXFLAGS="$(CFLAGS)"
 
 build: build-stamp
 
